@@ -6,9 +6,6 @@ compiler:
 os:
   - linux
 
-before_install:
-  - sudo apt-get update
-
 install:
 
 # OpenCV v3.0.0 (beta) install code (modified from orignal source: https://github.com/jayrambhia/Install-OpenCV)
@@ -27,7 +24,7 @@ install:
   - cd build
   
   # Set build instructions for Ubuntu distro.
-  - cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D WITH_CUDA=OFF ..
+  - cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON -D WITH_QT=ON -D WITH_OPENGL=ON -D WITH_CUDA=OFF -D ENABLE_CXX11=ON ..
   
   # Run 'make' with four threads.
   - make -j4
