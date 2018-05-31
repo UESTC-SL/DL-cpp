@@ -16,10 +16,13 @@ install:
   - sudo apt-get install -y python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
 
   # Download v3.0.0 .zip file and extract.
-  - git clone https://github.com/opencv/opencv.git
+  # - git clone https://github.com/opencv/opencv.git
+  # - cd opencv
+  - curl -sL https://github.com/opencv/opencv/archive/3.4.1.zip > opencv.zip
+  - unzip opencv.zip
+  - cd opencv-3.4.1
   
   # Create a new 'build' folder.
-  - cd opencv
   - mkdir build
   - cd build
   
