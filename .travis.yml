@@ -42,7 +42,6 @@ install:
   - cd ../../
 
 script:
-  - cd DL-cpp
   - cmake .
   - make
   - ./dl-main
